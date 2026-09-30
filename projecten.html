@@ -12,12 +12,31 @@
             <a href="index.html">Wie ben ik?</a>
             <a href="projecten.html">Projecten</a>
             <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main>
         <h1>Projecten</h1>
-        <p>Hier komen mijn projecten.</p>
+        <p>Hieronder staan projecten waar ik aan heb gewerkt.</p>
+
+        <div class="project-control" aria-label="Projecten filteren">
+            <label for="project-category">Filter op categorie:</label>
+            <select id="project-category">
+                <option value="Alles">Alles</option>
+                <option value="Web">Web</option>
+                <option value="Groepsproject">Groepsproject</option>
+                <option value="Database">Database</option>
+            </select>
+        </div>
+
+        <div class="project-control">
+            <p>Sorteer projecten:</p>
+            <button type="button" id="sorteer-az">Sorteer A-Z</button>
+        </div>
+
+        <section id="projecten" class="project-grid" aria-label="Projectenlijst"></section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

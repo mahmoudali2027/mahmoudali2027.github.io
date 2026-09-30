@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | WPFW Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Hoofdnavigatie">
+            <a href="index.html">Wie ben ik?</a>
+            <a href="projecten.html">Projecten</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact</h1>
+        <p>Vul het formulier in om een bericht te sturen.</p>
+
+        <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-field">
+                <label for="naam">Naam</label>
+                <input id="naam" name="naam" type="text" required minlength="2" aria-describedby="naam-error" aria-invalid="false">
+                <span id="naam-error" class="form-error" role="alert"></span>
+            </div>
+
+            <div class="form-field">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" required aria-describedby="email-error" aria-invalid="false">
+                <span id="email-error" class="form-error" role="alert"></span>
+            </div>
+
+            <div class="form-field">
+                <label for="bericht">Bericht</label>
+                <textarea id="bericht" name="bericht" required minlength="10" aria-describedby="bericht-error" aria-invalid="false"></textarea>
+                <span id="bericht-error" class="form-error" role="alert"></span>
+            </div>
+
+            <button type="submit">Verstuur bericht</button>
+            <div id="form-status" class="form-status" aria-live="polite"></div>
+        </form>
+    </main>
+
+    <script src="contact.js"></script>
+</body>
+</html>
